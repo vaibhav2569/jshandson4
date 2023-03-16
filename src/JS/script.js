@@ -197,4 +197,33 @@ function convertToInteger(str) {
        }
        
        checkEqual(1, 2);
+
+    //    21.Use Multiple Conditional (Ternary) Operators
+    function checkSign(num) {
+        return (num==0) ? "zero" 
+           : (num>0) ? "positive" 
+           : "negative";
+       }
        
+       checkSign(10);
+    //    22.Use Recursion to Create a Countdown
+    function countdown(n){
+        if (n < 1) {
+         return [];
+       } else {
+         const arr = countdown(n - 1);
+         arr.unshift(n);
+         return arr;
+       }
+     }
+    //  23.Use Recursion to Create a Range of Numbers
+    function rangeOfNumbers(startNum, endNum) {
+        if (endNum < startNum) {
+         return [];
+       } else {
+         const numbers = rangeOfNumbers(startNum, endNum - 1);
+         numbers.push(endNum);
+         return numbers;
+       }
+     };
+    
